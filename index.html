@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ถวายพระพรชัยมงคล วันฉัตรมงคล รัชกาลที่ ๑๐</title>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Noto+Serif+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1F3A;
+    --navy-mid: #152B50;
+    --navy-light: #1E3D6B;
+    --gold: #C9963A;
+    --gold-light: #E8B84B;
+    --gold-pale: #F5D888;
+    --gold-dim: #8A6420;
+    --cream: #FDF8EE;
+    --cream-mid: #F5EDD8;
+    --cream-dark: #E8D9B8;
+    --red-royal: #8B1A2C;
+    --white: #FFFFFF;
+    --text-dark: #1A1008;
+    --text-mid: #3D2B10;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Sarabun', serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ===== DECORATIVE PATTERNS ===== */
+  .thai-border-top {
+    width: 100%;
+    height: 8px;
+    background: repeating-linear-gradient(90deg,
+      var(--gold) 0px, var(--gold) 20px,
+      var(--navy) 20px, var(--navy) 24px,
+      var(--gold) 24px, var(--gold) 44px,
+      var(--red-royal) 44px, var(--red-royal) 48px
+    );
+  }
+
+  .ornament-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 12px auto;
+  }
+
+  .ornament-line span {
+    color: var(--gold);
+    font-size: 20px;
+    letter-spacing: 4px;
+  }
+
+  .ornament-line::before,
+  .ornament-line::after {
+    content: '';
+    flex: 1;
+    max-width: 180px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-light) 100%);
+    color: var(--cream);
+    text-align: center;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(201,150,58,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 50%, rgba(201,150,58,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .header-stripe {
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg,
+      var(--gold-dim) 0%, var(--gold) 30%, var(--gold-pale) 50%, var(--gold) 70%, var(--gold-dim) 100%);
+  }
+
+  .header-content {
+    padding: 40px 24px 36px;
+    position: relative;
+  }
+
+  .crown-svg {
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  .header-subtitle-top {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gold-pale);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    opacity: 0.85;
+  }
+
+  .header-title {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: clamp(24px, 5vw, 42px);
+    font-weight: 700;
+    color: var(--gold-pale);
+    line-height: 1.3;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.4);
+    animation: fadeInDown 1s ease;
+  }
+
+  .header-reign {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: clamp(16px, 3vw, 24px);
+    font-weight: 500;
+    color: var(--gold-light);
+    margin-bottom: 16px;
+    animation: fadeInDown 1.2s ease;
+  }
+
+  .header-school {
+    display: inline-block;
+    background: rgba(201,150,58,0.15);
+    border: 1px solid rgba(201,150,58,0.4);
+    border-radius: 4px;
+    padding: 8px 24px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cream-mid);
+    letter-spacing: 0.5px;
+    animation: fadeIn 1.5s ease;
+  }
+
+  .date-badge {
+    display: inline-block;
+    background: var(--red-royal);
+    color: var(--gold-pale);
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 20px;
+    border-radius: 2px;
+    margin-top: 16px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(201,150,58,0.5);
+  }
+
+  /* ===== MAIN SECTIONS ===== */
+  .section-wrapper {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* ===== INTRO SECTION ===== */
+  .intro-section {
+    background: var(--cream);
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .section-heading {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .section-heading::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-pale));
+    margin: 10px auto 20px;
+    border-radius: 2px;
+  }
+
+  .intro-text {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-mid);
+    line-height: 2;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  /* ===== BLESSING CARDS ===== */
+  .blessings-section {
+    background: var(--navy);
+    padding: 44px 20px;
+  }
+
+  .blessings-section .section-heading {
+    color: var(--gold-pale);
+    text-align: center;
+  }
+
+  .blessings-section .section-heading::after {
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold-pale), var(--gold-dim));
+  }
+
+  .blessings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  .blessing-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,150,58,0.35);
+    border-radius: 6px;
+    padding: 24px 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blessing-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 3px;
+    background: linear-gradient(90deg, var(--gold-dim), var(--gold-pale), var(--gold-dim));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .blessing-card:hover::before,
+  .blessing-card.selected::before {
+    transform: scaleX(1);
+  }
+
+  .blessing-card:hover {
+    background: rgba(201,150,58,0.08);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  .blessing-card.selected {
+    background: rgba(201,150,58,0.14);
+    border-color: var(--gold-light);
+  }
+
+  .blessing-number {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .blessing-text {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cream-mid);
+    line-height: 2;
+  }
+
+  .blessing-selected-badge {
+    position: absolute;
+    top: 12px; right: 14px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: none;
+    letter-spacing: 0.5px;
+  }
+
+  .blessing-card.selected .blessing-selected-badge {
+    display: inline-block;
+  }
+
+  /* ===== SELECTED BLESSING DISPLAY ===== */
+  .selected-display {
+    background: rgba(201,150,58,0.12);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    padding: 20px 28px;
+    max-width: 680px;
+    margin: 24px auto 0;
+    text-align: center;
+    display: none;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .selected-display.visible {
+    display: block;
+  }
+
+  .selected-display p {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--cream);
+    line-height: 2;
+    font-style: italic;
+  }
+
+  .selected-display .label {
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* ===== FORM SECTION ===== */
+  .form-section {
+    background: var(--cream-mid);
+    padding: 44px 20px;
+    text-align: center;
+  }
+
+  .form-section .section-heading {
+    color: var(--navy);
+  }
+
+  .form-description {
+    font-size: 15px;
+    color: var(--text-mid);
+    line-height: 2;
+    max-width: 600px;
+    margin: 0 auto 28px;
+    font-family: 'Noto Serif Thai', serif;
+  }
+
+  .form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid var(--cream-dark);
+    box-shadow: 0 4px 24px rgba(11,31,58,0.08);
+    overflow: hidden;
+  }
+
+  .form-container-header {
+    background: var(--navy);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .form-container-header span {
+    color: var(--gold-pale);
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .form-iframe-placeholder {
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .form-iframe-placeholder .placeholder-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+    opacity: 0.4;
+  }
+
+  .form-iframe-placeholder p {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.8;
+  }
+
+  .form-iframe-placeholder code {
+    background: #f4f4f4;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-family: monospace;
+    font-size: 13px;
+    color: #333;
+  }
+
+  /* Actual iframe - show when form URL is set */
+  .google-form-embed {
+    width: 100%;
+    border: none;
+    min-height: 600px;
+    display: block;
+  }
+
+  /* ===== PARTICIPANTS SECTION ===== */
+  .participants-section {
+    background: var(--cream);
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .participants-section .section-heading {
+    color: var(--navy);
+  }
+
+  .participants-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .participant-card {
+    background: var(--white);
+    border: 1px solid var(--cream-dark);
+    border-radius: 6px;
+    padding: 18px 16px;
+    text-align: center;
+    transition: box-shadow 0.2s;
+  }
+
+  .participant-card:hover {
+    box-shadow: 0 4px 16px rgba(11,31,58,0.1);
+  }
+
+  .participant-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .participant-card h4 {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.5;
+  }
+
+  /* ===== ROYAL MOTTO ===== */
+  .motto-section {
+    background: var(--navy-mid);
+    padding: 44px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .motto-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, rgba(201,150,58,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .motto-text {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: clamp(22px, 4vw, 36px);
+    font-weight: 700;
+    color: var(--gold-pale);
+    line-height: 1.5;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+  }
+
+  .motto-sub {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(245,216,136,0.7);
+    letter-spacing: 2px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--navy);
+    color: rgba(245,216,136,0.6);
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 13px;
+    font-family: 'Sarabun', sans-serif;
+    line-height: 2;
+    border-top: 3px solid var(--gold-dim);
+  }
+
+  footer strong {
+    color: var(--gold-pale);
+  }
+
+  /* ===== DIVIDERS ===== */
+  .gold-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    border: none;
+    margin: 0;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .animate-fade {
+    animation: fadeIn 0.8s ease both;
+  }
+
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.4s; }
+  .delay-3 { animation-delay: 0.6s; }
+  .delay-4 { animation-delay: 0.8s; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 600px) {
+    .blessings-grid { grid-template-columns: 1fr; }
+    .header-content { padding: 28px 16px 24px; }
+  }
+
+  /* Scroll animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .gold-shimmer {
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-pale) 40%, var(--gold) 80%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP STRIPE ===== -->
+<div class="thai-border-top"></div>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="header-stripe"></div>
+  <div class="header-content">
+
+    <!-- Crown SVG Emblem -->
+    <svg class="crown-svg" width="90" height="72" viewBox="0 0 90 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="crownGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#C9963A"/>
+          <stop offset="40%" style="stop-color:#F5D888"/>
+          <stop offset="100%" style="stop-color:#C9963A"/>
+        </linearGradient>
+      </defs>
+      <!-- Base plate -->
+      <rect x="10" y="54" width="70" height="10" rx="2" fill="url(#crownGrad)"/>
+      <!-- Crown body -->
+      <path d="M10 54 L10 36 L22 44 L35 18 L45 30 L55 18 L68 44 L80 36 L80 54 Z"
+            fill="url(#crownGrad)" stroke="#8A6420" stroke-width="0.8"/>
+      <!-- Center jewel -->
+      <circle cx="45" cy="38" r="5" fill="#8B1A2C" stroke="#F5D888" stroke-width="1"/>
+      <!-- Left jewels -->
+      <circle cx="28" cy="45" r="3.5" fill="#0B1F3A" stroke="#F5D888" stroke-width="1"/>
+      <!-- Right jewels -->
+      <circle cx="62" cy="45" r="3.5" fill="#0B1F3A" stroke="#F5D888" stroke-width="1"/>
+      <!-- Top spires -->
+      <line x1="45" y1="8" x2="45" y2="26" stroke="url(#crownGrad)" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="35" y1="12" x2="35" y2="24" stroke="url(#crownGrad)" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="55" y1="12" x2="55" y2="24" stroke="url(#crownGrad)" stroke-width="1.5" stroke-linecap="round"/>
+      <circle cx="45" cy="7" r="3" fill="url(#crownGrad)"/>
+      <circle cx="35" cy="11" r="2" fill="url(#crownGrad)"/>
+      <circle cx="55" cy="11" r="2" fill="url(#crownGrad)"/>
+      <!-- Decorative arches -->
+      <path d="M20 54 Q25 46 30 50" stroke="#8A6420" stroke-width="0.8" fill="none" opacity="0.6"/>
+      <path d="M70 54 Q65 46 60 50" stroke="#8A6420" stroke-width="0.8" fill="none" opacity="0.6"/>
+    </svg>
+
+    <p class="header-subtitle-top animate-fade">เนื่องในโอกาสมหามงคล</p>
+
+    <h1 class="header-title">
+      วันฉัตรมงคล
+    </h1>
+    <p class="header-reign animate-fade delay-1">
+      พระบาทสมเด็จพระปรเมนทรรามาธิบดีศรีสินทรมหาวชิราลงกรณ<br>
+      พระวชิรเกล้าเจ้าอยู่หัว รัชกาลที่ ๑๐
+    </p>
+
+    <div class="ornament-line animate-fade delay-2">
+      <span>✦ ✦ ✦</span>
+    </div>
+
+    <div class="header-school animate-fade delay-3">
+      โรงเรียนหนองกุงศาลาน้ำเที่ยงวิทยากร
+    </div>
+    <br>
+    <div class="date-badge animate-fade delay-4">
+      วันที่ ๔ พฤษภาคม ของทุกปี
+    </div>
+
+  </div>
+  <div class="header-stripe"></div>
+</header>
+
+<!-- ===== ROYAL MOTTO ===== -->
+<section class="motto-section">
+  <div class="section-wrapper">
+    <p class="motto-text reveal">
+      "<span class="gold-shimmer">สืบสาน รักษา ต่อยอด</span>"
+    </p>
+    <p class="motto-sub reveal delay-1">พระราชปณิธานของพระบาทสมเด็จพระเจ้าอยู่หัว</p>
+  </div>
+</section>
+
+<hr class="gold-divider">
+
+<!-- ===== INTRO SECTION ===== -->
+<section class="intro-section">
+  <div class="section-wrapper">
+    <h2 class="section-heading reveal">ความเป็นมาวันฉัตรมงคล</h2>
+    <p class="intro-text reveal delay-1">
+      วันฉัตรมงคล เป็นวันสำคัญของชาติไทย ตรงกับวันที่ ๔ พฤษภาคม ของทุกปี
+      เพื่อระลึกถึงวันพระราชพิธีบรมราชาภิเษก
+      พระบาทสมเด็จพระปรเมนทรรามาธิบดีศรีสินทรมหาวชิราลงกรณ พระวชิรเกล้าเจ้าอยู่หัว
+      ขึ้นทรงราชย์เป็นพระมหากษัตริย์รัชกาลที่ ๑๐ แห่งราชวงศ์จักรี
+      อย่างสมบูรณ์ตามโบราณราชประเพณี
+    </p>
+    <br>
+    <p class="intro-text reveal delay-2">
+      คณะครูและบุคลากรโรงเรียนหนองกุงศาลาน้ำเที่ยงวิทยากร
+      ขอน้อมเกล้าน้อมกระหม่อมถวายพระพรชัยมงคลแด่พระองค์ท่าน
+      ด้วยความจงรักภักดีและสำนึกในพระมหากรุณาธิคุณ
+    </p>
+  </div>
+</section>
+
+<hr class="gold-divider">
+
+<!-- ===== BLESSING PHRASES ===== -->
+<section class="blessings-section">
+  <div class="section-wrapper">
+    <h2 class="section-heading reveal">เลือกคำถวายพระพรชัยมงคล</h2>
+    <p style="text-align:center;color:rgba(245,216,136,0.65);font-size:14px;margin-bottom:28px;" class="reveal delay-1">
+      กรุณาเลือกคำถวายพระพรที่ท่านประสงค์ใช้ในการลงนาม
+    </p>
+
+    <div class="blessings-grid">
+
+      <div class="blessing-card reveal" onclick="selectBlessing(this, 1)">
+        <span class="blessing-selected-badge">✓ เลือกแล้ว</span>
+        <p class="blessing-number">คำที่ ๑</p>
+        <p class="blessing-text">
+          ขอพระองค์ทรงพระเจริญ มีพระพลานามัยสมบูรณ์แข็งแรง
+          และทรงเป็นมิ่งขวัญแก่ปวงชนชาวไทยตลอดกาล
+        </p>
+      </div>
+
+      <div class="blessing-card reveal delay-1" onclick="selectBlessing(this, 2)">
+        <span class="blessing-selected-badge">✓ เลือกแล้ว</span>
+        <p class="blessing-number">คำที่ ๒</p>
+        <p class="blessing-text">
+          ขอถวายพระพรชัยมงคล ขอพระองค์ทรงมีพระชนมายุยิ่งยืนนาน
+          เพื่อเป็นร่มฉัตรแก่ปวงประชาราษฎรสืบไป
+        </p>
+      </div>
+
+      <div class="blessing-card reveal delay-2" onclick="selectBlessing(this, 3)">
+        <span class="blessing-selected-badge">✓ เลือกแล้ว</span>
+        <p class="blessing-number">คำที่ ๓</p>
+        <p class="blessing-text">
+          ด้วยเกล้าด้วยกระหม่อม ขอเดชะ ขอพระองค์ทรงพระเจริญยิ่งยืนนาน
+          ทรงมีพระพลานามัยสมบูรณ์แข็งแรง และทรงสถิตเป็นมิ่งมงคลแก่ชาติไทย
+        </p>
+      </div>
+
+      <div class="blessing-card reveal delay-1" onclick="selectBlessing(this, 4)">
+        <span class="blessing-selected-badge">✓ เลือกแล้ว</span>
+        <p class="blessing-number">คำที่ ๔</p>
+        <p class="blessing-text">
+          ขอพระองค์ทรงเป็นมิ่งมงคลแก่ปวงพสกนิกรชาวไทย
+          ทรงพระเจริญรุ่งเรืองสถาพรตลอดกาลนาน
+        </p>
+      </div>
+
+      <div class="blessing-card reveal delay-2" onclick="selectBlessing(this, 5)">
+        <span class="blessing-selected-badge">✓ เลือกแล้ว</span>
+        <p class="blessing-number">คำที่ ๕</p>
+        <p class="blessing-text">
+          ขอน้อมถวายพระพรชัยมงคล ขอพระองค์จงทรงพระเจริญ
+          มีพระชนมพรรษายิ่งยืนนาน เป็นมหามิ่งขวัญแก่ชาวไทยทั้งปวง
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Selected blessing display -->
+    <div class="selected-display" id="selectedDisplay">
+      <p class="label">— คำถวายพระพรที่ท่านเลือก —</p>
+      <p id="selectedText"></p>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider">
+
+<!-- ===== PARTICIPANTS ===== -->
+<section class="participants-section">
+  <div class="section-wrapper">
+    <h2 class="section-heading reveal">ผู้ร่วมลงนามถวายพระพร</h2>
+    <div class="participants-grid reveal delay-1">
+      <div class="participant-card">
+        <div class="participant-icon">👩‍🏫</div>
+        <h4>คณะผู้บริหาร<br>โรงเรียน</h4>
+      </div>
+      <div class="participant-card">
+        <div class="participant-icon">📚</div>
+        <h4>คณะครูและ<br>บุคลากร</h4>
+      </div>
+      <div class="participant-card">
+        <div class="participant-icon">🎓</div>
+        <h4>นักเรียน<br>นักศึกษา</h4>
+      </div>
+      <div class="participant-card">
+        <div class="participant-icon">🏛️</div>
+        <h4>ประชาชน<br>ทั่วไป</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider">
+
+<!-- ===== FORM SECTION ===== -->
+<section class="form-section">
+  <div class="section-wrapper">
+    <h2 class="section-heading reveal">ลงนามถวายพระพรชัยมงคล</h2>
+    <p class="form-description reveal delay-1">
+      ขอเชิญชวนคณะครู บุคลากร นักเรียน และประชาชนทั่วไป
+      ร่วมลงนามถวายพระพรชัยมงคลแด่พระบาทสมเด็จพระเจ้าอยู่หัว
+      เนื่องในวันฉัตรมงคล
+    </p>
+
+    <div class="form-container reveal delay-2">
+      <div class="form-container-header">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8B84B" stroke-width="1.8" stroke-linecap="round">
+          <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+        </svg>
+        <span>แบบฟอร์มลงนามถวายพระพรชัยมงคล — Google Form</span>
+      </div>
+
+      <!--
+        ════════════════════════════════════════════════════════
+        👉 วิธีฝัง Google Form:
+           1. เปิด Google Form ที่สร้างแล้ว
+           2. คลิก ⋮ (จุดสามจุด) > "รับลิงก์ที่ฝัง"
+           3. แทนที่ src ด้านล่างด้วย URL จากขั้นตอนที่ 2
+           4. ลบบล็อก form-iframe-placeholder ออก
+        ════════════════════════════════════════════════════════
+      -->
+
+ 
+	  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeuLMWDx4wz9mVE3EoXeITCwWGX8r0ROTBqi8SSR4Ugj677Dg/viewform?embedded=true" 
+	  width="700" 
+	  height="600" 
+	  frameborder="0" 
+	  marginheight="0" 
+	  marginwidth="0"
+	  >กำลังโหลด…</iframe>
+	  
+
+
+
+    </div>
+  </div>
+</section>
+
+<hr class="gold-divider">
+
+<!-- ===== SECOND MOTTO ===== -->
+<section class="intro-section" style="background: var(--white); padding: 32px 20px;">
+  <div class="section-wrapper" style="text-align:center;">
+    <div class="ornament-line reveal"><span>✦ ✦ ✦</span></div>
+    <p class="reveal delay-1" style="font-family:'Noto Serif Thai',serif;font-size:18px;font-weight:600;color:var(--navy);line-height:2;">
+      ทรงพระเจริญ
+    </p>
+    <p class="reveal delay-2" style="font-family:'Noto Serif Thai',serif;font-size:15px;color:var(--text-mid);line-height:2;max-width:560px;margin:0 auto;">
+      ด้วยเกล้าด้วยกระหม่อม คณะครูและบุคลากร<br>
+      โรงเรียนหนองกุงศาลาน้ำเที่ยงวิทยากร
+    </p>
+    <div class="ornament-line reveal delay-3"><span>✦ ✦ ✦</span></div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <strong>โรงเรียนหนองกุงศาลาน้ำเที่ยงวิทยากร</strong><br>
+  จัดทำเว็บไซต์ถวายพระพรชัยมงคล เนื่องในวันฉัตรมงคล รัชกาลที่ ๑๐<br>
+  วันที่ ๔ พฤษภาคม ของทุกปี<br><br>
+  <span style="font-size:12px;opacity:0.5;">ทรงพระเจริญ ยิ่งยืนนาน</span>
+</footer>
+<div class="thai-border-top"></div>
+
+<!-- ===== SCRIPTS ===== -->
+<script>
+  const blessingTexts = {
+    1: 'ขอพระองค์ทรงพระเจริญ มีพระพลานามัยสมบูรณ์แข็งแรง และทรงเป็นมิ่งขวัญแก่ปวงชนชาวไทยตลอดกาล',
+    2: 'ขอถวายพระพรชัยมงคล ขอพระองค์ทรงมีพระชนมายุยิ่งยืนนาน เพื่อเป็นร่มฉัตรแก่ปวงประชาราษฎรสืบไป',
+    3: 'ด้วยเกล้าด้วยกระหม่อม ขอเดชะ ขอพระองค์ทรงพระเจริญยิ่งยืนนาน ทรงมีพระพลานามัยสมบูรณ์แข็งแรง และทรงสถิตเป็นมิ่งมงคลแก่ชาติไทย',
+    4: 'ขอพระองค์ทรงเป็นมิ่งมงคลแก่ปวงพสกนิกรชาวไทย ทรงพระเจริญรุ่งเรืองสถาพรตลอดกาลนาน',
+    5: 'ขอน้อมถวายพระพรชัยมงคล ขอพระองค์จงทรงพระเจริญ มีพระชนมพรรษายิ่งยืนนาน เป็นมหามิ่งขวัญแก่ชาวไทยทั้งปวง'
+  };
+
+  function selectBlessing(card, num) {
+    document.querySelectorAll('.blessing-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    const display = document.getElementById('selectedDisplay');
+    document.getElementById('selectedText').textContent = blessingTexts[num];
+    display.classList.add('visible');
+  }
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
